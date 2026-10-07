@@ -1,31 +1,58 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import BrandLogo from './BrandLogo'
+
+const exploreLinks = [
+  { label: 'Our work', to: '/work' },
+  { label: 'Innovations', to: '/innovations' },
+  { label: 'Research', to: '/research' },
+  { label: 'Impact', to: '/impact' },
+]
+
+const organisationLinks = [
+  { label: 'About us', to: '/about' },
+  { label: 'Get involved', to: '/get-involved' },
+  { label: 'Blog', to: '/blog' },
+  { label: 'Gallery', to: '/gallery' },
+]
 
 export default function Footer(){
   return (
-    <footer className="border-t border-slate-100">
-      <div className="container py-10 flex flex-col md:flex-row justify-between gap-6 items-start">
-        <div>
-          <BrandLogo variant="footer" />
-          <div className="text-slate-600 mt-2">People make nations. When people thrive, nations thrive.</div>
+    <footer className="site-footer">
+      <div className="container footer-main">
+        <div className="footer-brand">
+          <Link to="/" aria-label="Thrive Tribe home" className="footer-logo-link">
+            <BrandLogo variant="footer" />
+          </Link>
+          <p>People make nations. When people thrive, nations thrive.</p>
         </div>
-        <div className="flex gap-12">
-          <div className="flex flex-col text-slate-600">
-            <a href="/about" className="hover:text-slate-900">About</a>
-            <a href="/work" className="hover:text-slate-900">Our Work</a>
-            <a href="/innovations" className="hover:text-slate-900">Innovations</a>
-            <a href="/research" className="hover:text-slate-900">Research</a>
-            <a href="/blog" className="hover:text-slate-900">Blog</a>
-            <a href="/gallery" className="hover:text-slate-900">Gallery</a>
-            <a href="/impact" className="hover:text-slate-900">Impact</a>
-          </div>
-          <div className="flex flex-col text-slate-600">
-            <a href="/get-involved" className="hover:text-slate-900">Get Involved</a>
-            <a href="/contact" className="hover:text-slate-900">Contact</a>
-            <a href="#" className="hover:text-slate-900">Privacy Policy</a>
-            <a href="#" className="hover:text-slate-900">Terms of Use</a>
-          </div>
+
+        <nav className="footer-links" aria-label="Explore">
+          <h2>Explore</h2>
+          {exploreLinks.map((link) => (
+            <Link key={link.to} to={link.to}>{link.label}</Link>
+          ))}
+        </nav>
+
+        <nav className="footer-links" aria-label="Organisation">
+          <h2>Organisation</h2>
+          {organisationLinks.map((link) => (
+            <Link key={link.to} to={link.to}>{link.label}</Link>
+          ))}
+        </nav>
+
+        <div className="footer-contact">
+          <h2>Let’s build what’s next.</h2>
+          <p>Partner with us to create people-centred solutions that help communities thrive.</p>
+          <Link to="/contact" className="footer-contact-link">
+            Contact our team <span aria-hidden="true">↗</span>
+          </Link>
         </div>
+      </div>
+
+      <div className="container footer-bottom">
+        <span>© {new Date().getFullYear()} Thrive Tribe. All rights reserved.</span>
+        <Link to="/contact">Contact</Link>
       </div>
     </footer>
   )
