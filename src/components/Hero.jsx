@@ -1,4 +1,5 @@
 import React from 'react'
+import BrandLogo from './BrandLogo'
 
 export default function Hero(){
   return (
@@ -7,10 +8,13 @@ export default function Hero(){
       <div className="grid lg:grid-cols-12 gap-8 items-center">
         <div className="lg:col-span-7">
           <div className="eyebrow hero-eyebrow reveal" style={{animationDelay:'0s'}}>THRIVE TRIBE / NATION BUILDING + INNOVATION</div>
-          <h1 className="display hero-title mt-4 reveal" style={{animationDelay:'0.06s'}}>
+          <div className="hero-logo-wrap reveal" style={{animationDelay:'0.06s'}}>
+            <BrandLogo variant="hero" />
+          </div>
+          <h2 className="display hero-title mt-4 reveal" style={{animationDelay:'0.18s'}}>
             <span className="block">Nations thrive</span>
             <span className="block hero-title-accent">when people do.</span>
-          </h1>
+          </h2>
           <p className="lead mt-6 max-w-2xl reveal" style={{animationDelay:'0.24s'}}>Thrive Tribe is a nation-building and innovation organization creating people-centred solutions to the problems that prevent individuals, communities and nations from thriving.</p>
           <div className="flex flex-wrap gap-4 mt-8">
             <a href="/work" className="hero-button hero-button-primary reveal" style={{animationDelay:'0.42s'}}>Explore Our Work <span aria-hidden="true">↗</span></a>

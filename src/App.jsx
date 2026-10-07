@@ -12,6 +12,7 @@ import GetInvolved from './pages/GetInvolved'
 import Contact from './pages/Contact'
 import InnovationDetail from './pages/InnovationDetail'
 import Blog from './pages/Blog'
+import Gallery from './pages/Gallery'
 
 export default function App(){
   return (
@@ -30,6 +31,7 @@ export default function App(){
             <Route path="/get-involved" element={<GetInvolved/>} />
             <Route path="/contact" element={<Contact/>} />
             <Route path="/blog" element={<Blog/>} />
+            <Route path="/gallery" element={<Gallery/>} />
           </Routes>
         </main>
         <Footer />

@@ -1,11 +1,12 @@
 import React from 'react'
+import BrandLogo from './BrandLogo'
 
 export default function Footer(){
   return (
     <footer className="border-t border-slate-100">
       <div className="container py-10 flex flex-col md:flex-row justify-between gap-6 items-start">
         <div>
-          <div className="text-xl font-semibold">THRIVE TRIBE</div>
+          <BrandLogo variant="footer" />
           <div className="text-slate-600 mt-2">People make nations. When people thrive, nations thrive.</div>
         </div>
         <div className="flex gap-12">
@@ -15,6 +16,7 @@ export default function Footer(){
             <a href="/innovations" className="hover:text-slate-900">Innovations</a>
             <a href="/research" className="hover:text-slate-900">Research</a>
             <a href="/blog" className="hover:text-slate-900">Blog</a>
+            <a href="/gallery" className="hover:text-slate-900">Gallery</a>
             <a href="/impact" className="hover:text-slate-900">Impact</a>
           </div>
           <div className="flex flex-col text-slate-600">

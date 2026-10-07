@@ -1,0 +1,9 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="34" y="40" width="930" height="470" rx="18" fill="#090909"/>
+  <g fill="#FFFFFF" font-family="Arial Black, Impact, Arial, sans-serif" font-weight="900" letter-spacing="-0.12em">
+    <text x="100" y="170" font-size="128">THE</text>
+    <text x="70" y="305" font-size="170">THRIVE</text>
+    <text x="70" y="438" font-size="170">TRIBE</text>
+  </g>
+  <polygon points="872,236 990,298 872,360" fill="#22C55E"/>
+</svg>
